@@ -10,7 +10,7 @@ claimButton.addEventListener("click", (e) => {
 
     // Returns a special error for email inputs.
     if (formInputs[i].getAttribute("data-error") === "Email") {
-      email = sanitizeInput(formInputs[i].value);
+      let email = sanitizeInput(formInputs[i].value);
       if (validateEmail(email) == false) {
         formLabels[i].textContent = "Looks like this is not an email";
         errorImages[i].style.display = "block";
@@ -30,11 +30,9 @@ claimButton.addEventListener("click", (e) => {
 
     // Checks if an input passes and removes the error messages and stylings.
     if (passed) {
-      for (let i in formInputs) {
-        formInputs[i].className = "";
-        formLabels[i].textContent = "";
-        errorImages[i].style.display = "none";
-      }
+      formInputs[i].className = "";
+      formLabels[i].textContent = "";
+      errorImages[i].style.display = "none";
     }
   }
 });
@@ -50,5 +48,5 @@ function validateEmail(email) {
 
 // Removes spaces at the front and at the back of the string
 function sanitizeInput(input) {
-  return String(input).slice();
+  return String(input).trim();
 }
