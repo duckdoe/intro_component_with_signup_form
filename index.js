@@ -11,7 +11,7 @@ claimButton.addEventListener("click", (e) => {
     // Returns a special error for email inputs.
     if (formInputs[i].getAttribute("data-error") === "Email") {
       let email = sanitizeInput(formInputs[i].value);
-      if (validateEmail(email) == false) {
+      if (!validateEmail(email)) {
         formLabels[i].textContent = "Looks like this is not an email";
         errorImages[i].style.display = "block";
         passed = false;
