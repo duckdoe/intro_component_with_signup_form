@@ -20,13 +20,13 @@
         <header><span>Try it free 7 days</span> then $20/mo. thereafter</header>
         <form>
           <div id="input_group">
-            <input type="text" placeholder="First Name" id="first_name" class="error" data-error="First name"/>
+            <input type="text" placeholder="First Name" id="first_name" data-error="First name"/>
             <label for="first_name"></label>
             <img src="images/icon-error.svg" alt="Error icon">
           </div>
           <div id="input_group">
             <input type="text" placeholder="Last Name" id="last_name" data-error="Last Name"/>
-            <label for="last_name">Last Name</label>
+            <label for="last_name"></label>
             <img src="images/icon-error.svg" alt="Error icon">
           </div>
           <div id="input_group">
@@ -39,7 +39,7 @@
             <label for="password"></label>
             <img src="images/icon-error.svg" alt="Error icon">
           </div>
-          <button type="submit">CLAIM YOUR FREE TRIAL</button>
+          <button type="submit" id="claim_button">CLAIM YOUR FREE TRIAL</button>
           <footer id="terms_and_services">
             By clicking the button, you are agreeing to our
             <span>Terms and Services</span>
@@ -47,5 +47,7 @@
         </form>
       </div>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
